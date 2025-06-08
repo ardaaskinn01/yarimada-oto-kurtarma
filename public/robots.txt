@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://yarimadaotokurtarma.com.tr
+
+# Sitemaps
+Sitemap: https://yarimadaotokurtarma.com.tr/sitemap.xml

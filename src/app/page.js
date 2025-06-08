@@ -1,8 +1,39 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Head from "next/head";
+import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import CallButton from "./components/CallButton";
 
 export default function Home() {
+  const phoneNumber = "+90 (534) 031 40 04";
+
+  const services = [
+    {
+      title: "7/24 Acil Yardım",
+      description: "Gece gündüz demeden her an yanınızdayız"
+    },
+    {
+      title: "Uzman Ekip",
+      description: "Deneyimli ve sertifikalı teknik personel"
+    },
+    {
+      title: "Hızlı Müdahale",
+      description: "Siz aradıktan sonra en hızlı şekilde oradayız."
+    },
+    {
+      title: "Modern Ekipman",
+      description: "Son teknoloji kurtarma araç ve gereçleri"
+    },
+    {
+      title: "Sigortalı Taşıma",
+      description: "Full kaskolu güvenli taşıma hizmeti"
+    },
+    {
+      title: "Uygun Fiyat",
+      description: "Cebinizi yakmayacak ekonomik çözümler"
+    }
+  ];
+
   return (
     <>
       <Head>
@@ -18,40 +49,137 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <div className="grid grid-rows-[auto_1fr_auto] min-h-screen bg-gradient-to-br from-yellow-50 to-blue-100 text-gray-800">
-        {/* Navbar */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 text-gray-900">
         <Navbar />
 
-        {/* Ana İçerik */}
-        <main className="flex flex-col items-center justify-center px-4 py-16 gap-8">
-          <div className="shadow-xl rounded-xl overflow-hidden">
-            <Image
-              src="/(7).jpeg"
-              alt="İzmir oto kurtarma"
-              width={800}
-              height={500}
-              className="object-cover hover:scale-105 transition-transform duration-500"
-              priority
+        <main className="container mx-auto px-4 py-12">
+          {/* Hero Bölümü */}
+          <section className="flex flex-col lg:flex-row items-center gap-12 mb-16">
+            {/* Metin Alanı */}
+            <div className="lg:w-1/2 space-y-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                <span className="text-blue-600">Profesyonel</span> Oto Kurtarma Hizmeti
+              </h1>
+              <p className="text-lg text-gray-600">
+                7/24 acil yol yardım, çekici hizmeti ve oto kurtarma çözümleri.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                <CallButton phoneNumber={phoneNumber} />
+                <div className="bg-white p-4 rounded-lg shadow-md border border-gray-200">
+                  <p className="text-sm text-blue-700">Acil Yardım Hattı</p>
+                  <a
+                    href={`tel:${phoneNumber}`}
+                    className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+                  >
+                    {phoneNumber}
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Görsel */}
+            <div className="lg:w-1/2 relative rounded-xl overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 bg-black/70 backdrop-blur-xs"></div>
+              <Image
+                src="/(4).jpeg"
+                alt="İzmir oto kurtarma"
+                width={800}
+                height={600}
+                className="object-cover w-full h-full"
+                priority
+              />
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+                <CallButton
+                  phoneNumber={phoneNumber}
+                  className="bg-blue-500 hover:bg-blue-700 text-blue-600 py-4 px-8 rounded-full shadow-lg animate-pulse"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Hizmetler */}
+          <section className="bg-white rounded-xl shadow-lg p-8 mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+              <span className="text-blue-600">Neden</span> Bizi Tercih Etmelisiniz?
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-blue-50/50 hover:bg-blue-100/50 p-6 rounded-lg border border-blue-100 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <CheckCircleIcon className="h-6 w-6 text-blue-600" />
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-600">{service.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Müşteri Yorumları */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+              <span className="text-blue-600">Müşterilerimizin</span> Yorumları
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  name: "Ali Y.",
+                  comment: "Gece saat 3'te bile hemen geldiler. Hızlı ve güvenilir hizmet. Teşekkürler!",
+                },
+                {
+                  name: "Ayşe K.",
+                  comment: "Çekici çağırmam gerektiğinde ilk aradığım yer. Fiyatlar da gayet uygun.",
+                },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white p-6 rounded-xl shadow-md border border-blue-100"
+                >
+                  <p className="italic text-gray-600">"{item.comment}"</p>
+                  <p className="mt-4 text-right font-semibold text-blue-800">- {item.name}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Acil Çağrı */}
+          <section className="bg-red-600 rounded-xl p-6 text-white text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">ACİL DURUMDA MISINIZ?</h2>
+            <CallButton
+              phoneNumber={phoneNumber}
+              label={`ACİL ÇAĞRI: ${phoneNumber}`}
+              className="bg-blue-500 hover:bg-blue-700 text-red-600 mx-auto py-4 px-8"
             />
-          </div>
-          
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-800 drop-shadow-md">
-            İzmir Oto Kurtarma — Yolda Kalmayın, Biz Varız!
-          </h1>
-          <p className="text-center max-w-2xl text-gray-700 text-lg">
-            Türkiye’nin her noktasına <strong>7/24 çekici</strong> ve <strong>acil yol yardım hizmeti</strong>. Güvenilir, hızlı ve uygun fiyatlı çözümler için bizi arayın.
-          </p>
-          <a
-            href="tel:+905551112233"
-            className="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 font-medium text-lg"
-          >
-            Hemen Ara: 0555 111 22 33
-          </a>
+          </section>
         </main>
 
         {/* Footer */}
-        <footer className="py-6 text-center text-sm text-gray-600 bg-white border-t">
-          © {new Date().getFullYear()} <span className="font-semibold">Yarımada Oto Kurtarma</span>. Tüm hakları saklıdır.
+        <footer className="bg-gray-900 text-white py-12">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <div className="mb-6 md:mb-0">
+                <h3 className="text-2xl font-bold mb-2">Yarımada Oto Kurtarma</h3>
+                <p className="text-gray-400">Profesyonel Yol Yardım Hizmetleri</p>
+              </div>
+              <div className="space-y-2 text-center md:text-right">
+                <a
+                  href="tel:+905340314004"
+                  className="text-xl font-bold hover:text-blue-400 transition-colors"
+                >
+                  {phoneNumber}
+                </a>
+                <p className="text-gray-400">7/24 Hizmet Hattı</p>
+              </div>
+            </div>
+            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+              © {new Date().getFullYear()} Yarımada Oto Kurtarma. Tüm hakları saklıdır.
+            </div>
+          </div>
         </footer>
       </div>
     </>

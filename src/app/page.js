@@ -140,7 +140,7 @@ export default function Home() {
                   key={i}
                   className="bg-white p-6 rounded-xl shadow-md border border-blue-100"
                 >
-                  <p className="italic text-gray-600">"{item.comment}"</p>
+                  <p className="italic text-gray-600">&quot;{item.comment}&quot;</p>
                   <p className="mt-4 text-right font-semibold text-blue-800">- {item.name}</p>
                 </div>
               ))}

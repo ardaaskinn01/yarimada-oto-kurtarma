@@ -26,7 +26,7 @@ export default function Home() {
     },
     {
       title: "Sigortalı Taşıma",
-      description: "Full kaskolu güvenli taşıma hizmeti"
+      description: "Full kaskolu + taşıma kaskolu güvenli taşıma hizmeti"
     },
     {
       title: "Uygun Fiyat",
@@ -61,7 +61,7 @@ export default function Home() {
                 <span className="text-blue-600">Profesyonel</span> Oto Kurtarma Hizmeti
               </h1>
               <p className="text-lg text-gray-600">
-                7/24 acil yol yardım, çekici hizmeti ve oto kurtarma çözümleri.
+                7/24 acil yol yardım, çekici hizmeti ve full kaskolu + taşıma kaskolu oto kurtarma çözümleri.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-8">

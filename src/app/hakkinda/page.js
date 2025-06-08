@@ -9,7 +9,7 @@ export default function Hakkinda() {
         <title>Hakkımızda | Güvenilir Oto Kurtarma ve Mor Yağ Hizmetleri</title>
         <meta
           name="description"
-          content="3 yılı aşkın süredir oto kurtarma ve araç bakım sektöründe hizmet veren firmamız, 7/24 destek, full kasko güvencesi ve Mor Yağ markasıyla aracınıza tam destek sunuyor."
+          content="3 yılı aşkın süredir oto kurtarma ve araç bakım sektöründe hizmet veren firmamız, 7/24 destek, full kasko ve taşıma kasko güvencesi ve Mor Yağ markasıyla aracınıza tam destek sunuyor."
         />
       </Head>
 
@@ -42,7 +42,7 @@ export default function Hakkinda() {
 
           <section className="mb-10">
             <p className="text-lg leading-8">
-              Müşteri memnuniyetini temel ilke edinen firmamız, full kasko kapsamındaki kurtarma hizmetleriyle araç sahiplerine ekstra güvenlik sunmaktadır. Anlaşmalı sigorta firmalarıyla entegre çalışan sistemimiz sayesinde, kaza veya arıza anlarında hızlı ve sorunsuz bir müdahale süreci sağlıyor, tüm işlemleri sizin adınıza kolaylaştırıyoruz. Güçlü iletişim altyapımız ve operasyonel yetkinliğimizle her zaman yanınızdayız.
+              Müşteri memnuniyetini temel ilke edinen firmamız, full kasko ve kapsamındaki kurtarma hizmetleriyle araç sahiplerine ekstra güvenlik sunmaktadır. Anlaşmalı sigorta firmalarıyla entegre çalışan sistemimiz sayesinde, kaza veya arıza anlarında hızlı ve sorunsuz bir müdahale süreci sağlıyor, tüm işlemleri sizin adınıza kolaylaştırıyoruz. Güçlü iletişim altyapımız ve operasyonel yetkinliğimizle her zaman yanınızdayız.
             </p>
           </section>
 

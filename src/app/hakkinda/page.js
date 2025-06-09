@@ -20,7 +20,7 @@ export default function Hakkinda() {
             src="/(6).jpeg"
             alt="background"
             fill
-            className="object-cover blur-[2px]"
+            className="object-cover blur-xs"
             priority
           />
           <div className="absolute inset-0 bg-black opacity-75" />

@@ -27,7 +27,7 @@ export default function Iletisim() {
             src="/(5).jpeg"
             alt="Background"
             fill
-            className="object-cover blur-sm"
+            className="object-cover blur-xs"
             priority
           />
           <div className="absolute inset-0 bg-black opacity-60"></div>

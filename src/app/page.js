@@ -37,14 +37,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>İzmir Oto Kurtarma | Acil Yol Yardım & Çekici Hizmeti</title>
+        <title>İzmir, Karaburun ve Urla Çekici | 7/24 Oto Kurtarma ve Yol Yardım</title>
         <meta
           name="description"
-          content="İzmir'de 7/24 oto kurtarma, çekici ve acil yol yardım hizmeti. Hızlı, güvenilir ve profesyonel destek için hemen arayın!"
+          content="İzmir, Karaburun ve Urla bölgelerinde 7/24 oto kurtarma, çekici ve acil yol yardım hizmeti. Hızlı ve güvenilir destek için hemen arayın!"
         />
         <meta
           name="keywords"
-          content="oto kurtarma, izmir çekici, izmir oto yardım, yol yardım, araç çekici, izmir oto kurtarma"
+          content="oto kurtarma, izmir çekici, karaburun çekici, urla çekici, izmir oto yardım, yol yardım, araç çekici, izmir oto kurtarma"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -61,7 +61,7 @@ export default function Home() {
                 <span className="text-blue-600">Profesyonel</span> Oto Kurtarma Hizmeti
               </h1>
               <p className="text-lg text-gray-600">
-                7/24 acil yol yardım, çekici hizmeti ve full kaskolu + taşıma kaskolu oto kurtarma çözümleri.
+                7/24 acil İzmir, Karaburun, Urla oto kurtarma,  yol yardım, çekici hizmeti ve full kaskolu + taşıma kaskolu oto kurtarma çözümleri.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -176,6 +176,10 @@ export default function Home() {
                 <p className="text-gray-400">7/24 Hizmet Hattı</p>
               </div>
             </div>
+            <p className="text-sm text-gray-500 mt-4">
+                  Yarımada Oto Kurtarma, Türkiye&apos;nin her yerine, özellikle İzmir&apos;in Karaburun ve Urla ilçelerine özel 7/24 çekici ve yol yardım hizmeti sunar.
+                  <strong> Karaburun çekici</strong>, <strong>Urla çekici</strong> ve <strong>İzmir çekici</strong> arayanlar için güvenilir çözümler.
+                </p>
             <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
               © {new Date().getFullYear()} Yarımada Oto Kurtarma. Tüm hakları saklıdır.
             </div>

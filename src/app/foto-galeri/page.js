@@ -11,6 +11,8 @@ const images = [
   "/(6).jpeg",
   "/(7).jpeg",
   "/(8).jpeg",
+  "/11.jpg",
+  "/12.jpg"
 ];
 
 export default function PhotoGaleri() {

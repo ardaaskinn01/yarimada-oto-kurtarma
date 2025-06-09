@@ -2,11 +2,12 @@
 import Navbar from "../components/Navbar";
 import Head from "next/head";
 import Image from "next/image";
+import Script from 'next/script';
 
 export default function Iletisim() {
   return (
     <>
-    <Script
+      <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-17178419606"
         strategy="afterInteractive"
       />

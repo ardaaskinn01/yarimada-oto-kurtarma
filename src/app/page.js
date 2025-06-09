@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Head from "next/head";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import CallButton from "./components/CallButton";
+import Script from 'next/script';
 
 export default function Home() {
   const phoneNumber = "+90 (534) 031 40 04";

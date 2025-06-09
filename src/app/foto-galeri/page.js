@@ -20,6 +20,19 @@ export default function PhotoGaleri() {
 
   return (
     <>
+        <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AM-17178419606" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AM-17178419606');
+            `,
+          }}
+        />
+      </Head>
       <Navbar />
       <main className="min-h-screen bg-gray-900 text-white p-8">
         <h1 className="text-3xl font-bold mb-8 text-center">Foto Galeri</h1>

@@ -5,8 +5,7 @@ import Image from "next/image";
 export default function Hakkinda() {
   return (
     <>
-      <Head>
-        <Script
+    <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-17178419606"
         strategy="afterInteractive"
       />
@@ -18,6 +17,7 @@ export default function Hakkinda() {
           gtag('config', 'AW-17178419606');
         `}
       </Script>
+      <Head>
         <title>Hakkımızda | Güvenilir Oto Kurtarma ve Mor Yağ Hizmetleri</title>
         <meta
           name="description"

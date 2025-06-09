@@ -6,8 +6,7 @@ import Image from "next/image";
 export default function Iletisim() {
   return (
     <>
-      <Head>
-        <Script
+    <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-17178419606"
         strategy="afterInteractive"
       />
@@ -19,6 +18,7 @@ export default function Iletisim() {
           gtag('config', 'AW-17178419606');
         `}
       </Script>
+      <Head>
         <title>İletişim | Yarımada Oto Kurtarma - Bize Ulaşın</title>
         <meta
           name="description"

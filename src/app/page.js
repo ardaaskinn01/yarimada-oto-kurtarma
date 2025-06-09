@@ -36,8 +36,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-       <Script
+      <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-17178419606"
         strategy="afterInteractive"
       />
@@ -49,6 +48,7 @@ export default function Home() {
           gtag('config', 'AW-17178419606');
         `}
       </Script>
+      <Head>
         <title>İzmir, Karaburun ve Urla Çekici | 7/24 Oto Kurtarma ve Yol Yardım</title>
         <meta
           name="description"

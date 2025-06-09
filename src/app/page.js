@@ -37,6 +37,17 @@ export default function Home() {
   return (
     <>
       <Head>
+       <script async src="https://www.googletagmanager.com/gtag/js?id=AM-17178419606" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AM-17178419606');
+            `,
+          }}
+        />
         <title>İzmir, Karaburun ve Urla Çekici | 7/24 Oto Kurtarma ve Yol Yardım</title>
         <meta
           name="description"
@@ -48,6 +59,8 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
+
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 text-gray-900">
         <Navbar />
@@ -177,9 +190,9 @@ export default function Home() {
               </div>
             </div>
             <p className="text-sm text-gray-500 mt-4">
-                  Yarımada Oto Kurtarma, Türkiye&apos;nin her yerine, özellikle İzmir&apos;in Karaburun ve Urla ilçelerine özel 7/24 çekici ve yol yardım hizmeti sunar.
-                  <strong> Karaburun çekici</strong>, <strong>Urla çekici</strong> ve <strong>İzmir çekici</strong> arayanlar için güvenilir çözümler.
-                </p>
+              Yarımada Oto Kurtarma, Türkiye&apos;nin her yerine, özellikle İzmir&apos;in Karaburun ve Urla ilçelerine özel 7/24 çekici ve yol yardım hizmeti sunar.
+              <strong> Karaburun çekici</strong>, <strong>Urla çekici</strong> ve <strong>İzmir çekici</strong> arayanlar için güvenilir çözümler.
+            </p>
             <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
               © {new Date().getFullYear()} Yarımada Oto Kurtarma. Tüm hakları saklıdır.
             </div>

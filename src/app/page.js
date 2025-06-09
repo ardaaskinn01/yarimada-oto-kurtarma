@@ -52,7 +52,7 @@ export default function Home() {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 text-gray-900">
         <Navbar />
 
-        <main className="container mx-auto px-4 py-12">
+        <main className="container mx-auto px-4 py-24">
           {/* Hero Bölümü */}
           <section className="flex flex-col lg:flex-row items-center gap-12 mb-16">
             {/* Metin Alanı */}

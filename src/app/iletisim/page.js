@@ -7,17 +7,18 @@ export default function Iletisim() {
   return (
     <>
       <Head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AM-17178419606" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AM-17178419606');
-            `,
-          }}
-        />
+        <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17178419606"
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17178419606');
+        `}
+      </Script>
         <title>İletişim | Yarımada Oto Kurtarma - Bize Ulaşın</title>
         <meta
           name="description"

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
+import Head from "next/head";
 
 const images = [
   "/(1).jpeg",

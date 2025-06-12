@@ -3,8 +3,13 @@ import Navbar from "../components/Navbar";
 import Head from "next/head";
 import Image from "next/image";
 import Script from 'next/script';
+// CallButton bileşenini import edin
+import CallButton from "../components/CallButton"; 
 
 export default function Iletisim() {
+  // Telefon numarasını burada tanımlayın
+  const phoneNumber = "+905340314004"; // Boşlukları kaldırarak temiz bir numara
+
   return (
     <>
       <Script
@@ -65,14 +70,14 @@ export default function Iletisim() {
 
             <div>
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Telefon</h2>
-              <p className="text-lg">
-                <a
-                  href="tel:+905340314004"
-                  className="hover:text-blue-300 transition"
-                >
-                  +90 (534) 031 40 04
-                </a>
-              </p>
+              {/* Burayı CallButton ile değiştiriyoruz */}
+              <div className="flex justify-center"> {/* Butonu ortalamak için ekledik */}
+                <CallButton 
+                  phoneNumber={phoneNumber} 
+                  label="+90 (534) 031 40 04" // Butonun üzerinde görünmesini istediğiniz metin
+                  className="w-full sm:w-auto" // Butonun genişliğini ayarlayabiliriz
+                />
+              </div>
             </div>
           </div>
         </div>

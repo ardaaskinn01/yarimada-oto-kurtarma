@@ -85,7 +85,7 @@ export default function CommentSection() {
               className="w-[500px] min-h-[180px] bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md border border-blue-100 flex flex-col"
             >
               <p className="italic text-gray-700 text-lg overflow-hidden">
-                "{item.comment.length > 220 ? item.comment.slice(0, 220) + "..." : item.comment}"
+                &quot;{item.comment.length > 220 ? item.comment.slice(0, 220) + "..." : item.comment}&quot;
               </p>
               <p className="mt-auto text-right font-semibold text-blue-800">
                 - {item.name}

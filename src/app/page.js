@@ -4,6 +4,7 @@ import Head from "next/head";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import CallButton from "./components/CallButton";
 import Script from 'next/script';
+import CommentSection from "./components/CommentSection";
 
 export default function Home() {
   const phoneNumber = "+90 (534) 031 40 04";
@@ -123,13 +124,17 @@ export default function Home() {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-blue-50/50 hover:bg-blue-100/50 p-6 rounded-lg border border-blue-100 transition-all duration-300"
+                  className="group bg-white p-6 rounded-xl border border-blue-100 shadow-sm hover:shadow-xl transition-all duration-300"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <CheckCircleIcon className="h-6 w-6 text-blue-600" />
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                    <CheckCircleIcon className="h-6 w-6 text-blue-600 group-hover:scale-110 transition" />
+                    <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-700">
+                      {service.title}
+                    </h3>
                   </div>
-                  <p className="text-gray-600">{service.description}</p>
+                  <p className="text-gray-600 group-hover:text-gray-800 transition">
+                    {service.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -140,27 +145,15 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
               <span className="text-blue-600">Müşterilerimizin</span> Yorumları
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                {
-                  name: "Ali Y.",
-                  comment: "Gece saat 3'te bile hemen geldiler. Hızlı ve güvenilir hizmet. Teşekkürler!",
-                },
-                {
-                  name: "Ayşe K.",
-                  comment: "Çekici çağırmam gerektiğinde ilk aradığım yer. Fiyatlar da gayet uygun.",
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-white p-6 rounded-xl shadow-md border border-blue-100"
-                >
-                  <p className="italic text-gray-600">&quot;{item.comment}&quot;</p>
-                  <p className="mt-4 text-right font-semibold text-blue-800">- {item.name}</p>
-                </div>
-              ))}
-            </div>
+            <CommentSection />
           </section>
+          
+          <a
+            href={`tel:${phoneNumber}`}
+            className="fixed bottom-6 right-6 bg-red-600 text-white px-6 py-3 rounded-full shadow-xl hover:bg-red-700 transition-all z-50"
+          >
+            🚨 Acil Çağrı
+          </a>
 
           {/* Acil Çağrı */}
           <section className="bg-red-600 rounded-xl p-6 text-white text-center">

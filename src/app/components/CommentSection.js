@@ -66,7 +66,7 @@ export default function CommentSection() {
 
   return (
     <div className="mt-12 max-w-3xl mx-auto">
-      <div className="relative flex flex-col items-center justify-center gap-6">
+      <div className="relative flex items-center justify-center gap-4 flex-wrap md:flex-nowrap">
         {/* Sol Ok */}
         <button
           onClick={goPrev}
@@ -78,11 +78,11 @@ export default function CommentSection() {
         </button>
 
         {/* Kartlar */}
-        <div className="flex gap-6 flex-wrap justify-center px-4">
+        <div className="flex gap-6 flex-wrap justify-center md:flex-nowrap">
           {currentComments.map((item) => (
             <div
               key={item.id}
-              className="w-full max-w-sm min-h-[180px] bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md border border-blue-100 flex flex-col"
+              className="w-[90vw] sm:w-[400px] md:w-[500px] min-h-[180px] bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md border border-blue-100 flex flex-col"
             >
               <p className="italic text-gray-700 text-lg overflow-hidden">
                 &quot;{item.comment.length > 220 ? item.comment.slice(0, 220) + "..." : item.comment}&quot;

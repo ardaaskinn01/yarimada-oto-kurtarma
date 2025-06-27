@@ -66,23 +66,23 @@ export default function CommentSection() {
 
   return (
     <div className="mt-12 max-w-3xl mx-auto">
-      <div className="relative flex items-center justify-center gap-6">
+      <div className="relative flex flex-col items-center justify-center gap-6">
         {/* Sol Ok */}
         <button
           onClick={goPrev}
           disabled={page === 0}
-          className={`p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed`}
+          className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
           aria-label="Önceki yorumlar"
         >
           &#8592;
         </button>
 
-        {/* Yorum Kartları */}
-        <div className="flex gap-6">
+        {/* Kartlar */}
+        <div className="flex gap-6 flex-wrap justify-center px-4">
           {currentComments.map((item) => (
             <div
               key={item.id}
-              className="w-[500px] min-h-[180px] bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md border border-blue-100 flex flex-col"
+              className="w-full max-w-sm min-h-[180px] bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-md border border-blue-100 flex flex-col"
             >
               <p className="italic text-gray-700 text-lg overflow-hidden">
                 &quot;{item.comment.length > 220 ? item.comment.slice(0, 220) + "..." : item.comment}&quot;
@@ -101,7 +101,7 @@ export default function CommentSection() {
         <button
           onClick={goNext}
           disabled={page >= pagesCount - 1}
-          className={`p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed`}
+          className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
           aria-label="Sonraki yorumlar"
         >
           &#8594;

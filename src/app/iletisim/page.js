@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Script from 'next/script';
 // CallButton bileşenini import edin
-import CallButton from "../components/CallButton"; 
+import CallButton from "../components/CallButton";
 
 export default function Iletisim() {
   // Telefon numarasını burada tanımlayın
@@ -12,18 +12,7 @@ export default function Iletisim() {
 
   return (
     <>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-17178419606"
-        strategy="afterInteractive"
-      />
-      <Script id="google-tag" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17178419606');
-        `}
-      </Script>
+
       <Head>
         <title>İletişim | Yarımada Oto Kurtarma - Bize Ulaşın</title>
         <meta
@@ -72,8 +61,8 @@ export default function Iletisim() {
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Telefon</h2>
               {/* Burayı CallButton ile değiştiriyoruz */}
               <div className="flex justify-center"> {/* Butonu ortalamak için ekledik */}
-                <CallButton 
-                  phoneNumber={phoneNumber} 
+                <CallButton
+                  phoneNumber={phoneNumber}
                   label="+90 (534) 031 40 04" // Butonun üzerinde görünmesini istediğiniz metin
                   className="w-full sm:w-auto" // Butonun genişliğini ayarlayabiliriz
                 />

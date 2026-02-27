@@ -22,18 +22,7 @@ export default function PhotoGaleri() {
 
     return (
         <>
-        <Script
-                    src="https://www.googletagmanager.com/gtag/js?id=AW-17178419606"
-                    strategy="afterInteractive"
-                />
-                <Script id="google-tag" strategy="afterInteractive">
-                    {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17178419606');
-        `}
-                </Script>
+
             <Navbar />
             <main className="min-h-screen bg-gray-900 text-white p-8">
                 <h1 className="text-3xl font-bold mb-8 text-center">Foto Galeri</h1>

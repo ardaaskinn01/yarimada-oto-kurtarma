@@ -38,18 +38,7 @@ export default function Home() {
 
   return (
     <>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-17178419606"
-        strategy="afterInteractive"
-      />
-      <Script id="google-tag" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17178419606');
-        `}
-      </Script>
+
       <Head>
         <title>İzmir, Karaburun ve Urla Çekici | 7/24 Oto Kurtarma ve Yol Yardım</title>
         <meta
@@ -147,7 +136,7 @@ export default function Home() {
             </h2>
             <CommentSection />
           </section>
-          
+
           <a
             href={`tel:${phoneNumber}`}
             className="fixed bottom-6 right-6 bg-red-600 text-white px-6 py-3 rounded-full shadow-xl hover:bg-red-700 transition-all z-50"

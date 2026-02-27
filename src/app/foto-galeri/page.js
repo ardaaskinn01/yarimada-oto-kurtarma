@@ -24,8 +24,8 @@ export default function PhotoGaleri() {
         <>
 
             <Navbar />
-            <main className="min-h-screen bg-gray-900 text-white p-8">
-                <h1 className="text-3xl font-bold mb-8 text-center">Foto Galeri</h1>
+            <main className="min-h-screen bg-[#070b14] text-white pt-32 p-8">
+                <h1 className="text-4xl font-bold mb-12 text-center text-blue-400">Foto Galeri</h1>
 
                 {/* Küçük fotoğraflar grid */}
                 <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto">

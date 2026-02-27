@@ -17,7 +17,7 @@ export default function Hakkinda() {
 
       <div className="relative min-h-screen">
         {/* Arkaplan Görseli */}
-        <div className="absolute inset-0 -z-10">
+        <div className="fixed inset-0 -z-10">
           <Image
             src="/(6).jpeg"
             alt="background"
@@ -31,7 +31,7 @@ export default function Hakkinda() {
         <Navbar />
 
         {/* İçerik */}
-        <main className="max-w-4xl mx-auto px-6 py-24 text-gray-200">
+        <main className="relative z-10 max-w-4xl mx-auto px-6 py-32 text-gray-200">
           <h1 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">
             Hakkımızda
           </h1>

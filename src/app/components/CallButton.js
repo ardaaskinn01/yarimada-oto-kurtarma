@@ -20,7 +20,7 @@ export default function CallButton({ phoneNumber, label = "HEMEN ARA", className
   return (
     <button
       onClick={handleCall}
-      className={`flex items-center justify-center gap-2 bg-blue-400 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg shadow-md transition-all duration-300 ${className}`}
+      className={`flex items-center justify-center gap-2 ${className ? className : "bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg shadow-[0_0_15px_rgba(37,99,235,0.4)] transition-all duration-300"}`}
     >
       <PhoneArrowDownLeftIcon className="h-5 w-5" />
       {label}

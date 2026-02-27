@@ -29,7 +29,7 @@ export default function Iletisim() {
         <Navbar />
 
         {/* Arkaplan image + blur + siyah opacity */}
-        <div className="absolute inset-0 z-0">
+        <div className="fixed inset-0 -z-10">
           <Image
             src="/(5).jpeg"
             alt="Background"
@@ -40,7 +40,7 @@ export default function Iletisim() {
           <div className="absolute inset-0 bg-black opacity-60"></div>
         </div>
 
-        <div className="flex-grow py-24 px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center">
+        <div className="flex-grow py-32 px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center">
           <h1 className="text-5xl font-bold text-blue-400 mb-8">İLETİŞİM</h1>
 
           {/* Kare kutu, genişlik ve yükseklik eşit */}

@@ -174,7 +174,7 @@ export default function Home() {
           </a>
 
           {/* Acil Çağrı */}
-          <section className="bg-gradient-to-r from-red-900/80 to-red-700/80 backdrop-blur-lg rounded-3xl p-12 text-center border border-red-500/30 shadow-[0_0_50px_rgba(220,38,38,0.2)] relative overflow-hidden">
+          <section className="bg-gradient-to-r from-red-800 to-red-600 backdrop-blur-lg rounded-3xl p-12 text-center border border-red-500/30 shadow-[0_0_50px_rgba(220,38,38,0.2)] relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tight text-white drop-shadow-md">YOLDA MI KALDINIZ?</h2>

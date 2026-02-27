@@ -19,13 +19,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold flex items-center space-x-2 group hover:scale-105 transition-transform duration-300">
-            <div className="p-1.5 bg-white/5 rounded-lg border border-white/10 group-hover:bg-white/10 transition-colors">
+            <div className="py-2">
               <Image
                 src="/11.png"
                 alt="Yarımada Oto Kurtarma Logo"
-                width={160}
-                height={40}
-                className="brightness-125"
+                width={200}
+                height={50}
+                className="brightness-110 drop-shadow-lg"
                 priority
               />
             </div>
@@ -70,8 +70,8 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={`block px-4 py-3 rounded-lg text-lg uppercase tracking-wide border border-transparent ${pathname === item.href
-                      ? 'bg-blue-600/20 text-blue-400 border-blue-500/30'
-                      : 'text-gray-300 hover:bg-white/5 hover:text-white'
+                    ? 'bg-blue-600/20 text-blue-400 border-blue-500/30'
+                    : 'text-gray-300 hover:bg-white/5 hover:text-white'
                     } transition-all duration-300`}
                   onClick={() => setIsMenuOpen(false)}
                 >

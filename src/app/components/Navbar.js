@@ -9,34 +9,38 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const getLinkClass = (href) =>
-  pathname === href || (href === "/projelerimiz" && pathname.startsWith("/projelerimiz"))
-    ? "relative font-semibold text-gray-100 after:content-[''] after:absolute after:w-full after:h-[3px] after:bg-gray-100 after:bottom-0 after:left-0"
-    : "relative text-gray-100 hover:text-gray-100 transition-colors duration-300 after:content-[''] after:absolute after:w-0 hover:after:w-full after:h-[2px] after:bg-gray-100 after:bottom-0 after:left-0 after:transition-all after:duration-300";
+    pathname === href || (href === "/projelerimiz" && pathname.startsWith("/projelerimiz"))
+      ? "relative font-semibold text-gray-100 after:content-[''] after:absolute after:w-full after:h-[3px] after:bg-gray-100 after:bottom-0 after:left-0"
+      : "relative text-gray-100 hover:text-gray-100 transition-colors duration-300 after:content-[''] after:absolute after:w-0 hover:after:w-full after:h-[2px] after:bg-gray-100 after:bottom-0 after:left-0 after:transition-all after:duration-300";
 
   return (
-    <nav className="fixed w-full z-50 bg-gradient-to-r from-indigo-900 via-indigo-600 to-indigo-400 backdrop-blur-md top-0 left-0 right-0 shadow-lg">
+    <nav className="fixed w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10 top-0 left-0 right-0 shadow-2xl transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold">
-            <Image
-              src="/11.png"
-              alt="Yarımada Oto Kurtarma Logo"
-              width={132}
-              height={36}
-            />
+          <Link href="/" className="text-2xl font-bold flex items-center space-x-2 group hover:scale-105 transition-transform duration-300">
+            <div className="p-1.5 bg-white/5 rounded-lg border border-white/10 group-hover:bg-white/10 transition-colors">
+              <Image
+                src="/11.png"
+                alt="Yarımada Oto Kurtarma Logo"
+                width={160}
+                height={40}
+                className="brightness-125"
+                priority
+              />
+            </div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className={`px-2 py-2 text-md ${getLinkClass("/")}`}>ANA SAYFA</Link>
-            <Link href="/hakkinda" className={`px-2 py-2 text-md ${getLinkClass("/hakkinda")}`}>HAKKIMIZDA</Link>
-            <Link href="/foto-galeri" className={`px-2 py-2 text-md ${getLinkClass("/foto")}`}>FOTO GALERİ</Link>
-            <Link href="/iletisim" className={`px-2 py-2 text-md ${getLinkClass("/iletisim")}`}>İLETİŞİM</Link>
+          <div className="hidden md:flex items-center space-x-6">
+            <Link href="/" className={`px-3 py-2 text-sm uppercase tracking-wider ${getLinkClass("/")}`}>ANA SAYFA</Link>
+            <Link href="/hakkinda" className={`px-3 py-2 text-sm uppercase tracking-wider ${getLinkClass("/hakkinda")}`}>HAKKIMIZDA</Link>
+            <Link href="/foto-galeri" className={`px-3 py-2 text-sm uppercase tracking-wider ${getLinkClass("/foto")}`}>FOTO GALERİ</Link>
+            <Link href="/iletisim" className={`px-3 py-2 text-sm uppercase tracking-wider ${getLinkClass("/iletisim")}`}>İLETİŞİM</Link>
           </div>
 
           {/* Mobil Menü Butonu */}
           <button
-            className="md:hidden p-2 text-black focus:outline-none rounded-md hover:bg-indigo-500 transition-colors"
+            className="md:hidden p-2 text-white focus:outline-none rounded-md hover:bg-white/10 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Menu"
           >
@@ -54,8 +58,8 @@ export default function Navbar() {
 
         {/* Mobil Menü İçeriği */}
         {isMenuOpen && (
-          <div className="md:hidden bg-indigo-400/90 backdrop-blur-lg border-t border-indigo-500">
-            <div className="px-4 py-3 space-y-4">
+          <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-white/10 absolute left-0 w-full shadow-2xl">
+            <div className="px-4 py-6 space-y-4">
               {[
                 { href: "/", label: "Ana Sayfa" },
                 { href: "/hakkinda", label: "Hakkımızda" },
@@ -65,7 +69,10 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`block px-4 py-3 rounded-lg text-lg ${getLinkClass(item.href)} hover:bg-indigo-500/60 transition-colors`}
+                  className={`block px-4 py-3 rounded-lg text-lg uppercase tracking-wide border border-transparent ${pathname === item.href
+                      ? 'bg-blue-600/20 text-blue-400 border-blue-500/30'
+                      : 'text-gray-300 hover:bg-white/5 hover:text-white'
+                    } transition-all duration-300`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
